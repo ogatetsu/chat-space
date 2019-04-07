@@ -58,7 +58,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|integer|null: false|
-|user_id|integer|null: false|
 
 ### Association
 - has_many :messages
