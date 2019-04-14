@@ -1,6 +1,6 @@
 @import "./reset";
 @import "font-awesome";
-
+@import "mixin/btn-style";
 
 html,body{
   height: 100%;
@@ -10,12 +10,11 @@ html,body{
   padding: 0;
 }
 
-
 .create-box{
   background-color: #38aef0;
   &__message{
     text-align: center;
-    color:white;
+    color: white;
   }
 }
 
@@ -26,38 +25,37 @@ html,body{
   position: fixed;
 }
 
-.left_area{
+.left-area{
   width:300px;
   float:left;
   height:100%;
   background-color: #2f3e51;
-}
-
-.header_left{
-  width:300px;
-  height:96px;
-  background-color:#253141;
-  margin:0;
-  h1{
-    padding:0 20px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    float:left;
-    line-height: 96px;
-  }
-  ul{
-    padding:0 15px;
-    a{
-      color:#fff;
-    }
-    li{
+  &__header{
+    width:300px;
+    height:96px;
+    background-color:#253141;
+    margin:0;
+    h1{
+      padding:0 20px;
       color: #fff;
-      float:right;
+      font-size: 16px;
+      font-weight: bold;
+      float:left;
       line-height: 96px;
-      margin:0 5px 0 0;
-      i{
-        cursor: pointer;
+    }
+    ul{
+      padding:0 15px;
+      a{
+        color:#fff;
+      }
+      li{
+        color: #fff;
+        float:right;
+        line-height: 96px;
+        margin:0 5px 0 0;
+        i{
+          cursor: pointer;
+        }
       }
     }
   }
@@ -208,13 +206,7 @@ html,body{
       }
     }
     input[type="submit"]{
-      background-color: #38aef0;
-      width: 100px;
-      color: #fff;
-      border: 0;
-      text-align:center;
-      font-size: 16px;
-      cursor: pointer;
+      @include btn-style();
     }
   }
 }
