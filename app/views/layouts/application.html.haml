@@ -7,11 +7,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %div.create-box
+    .create-box
       %div.create-box__message グループ作成しました
-    %div.wrapper
-      %div.left-area
-        %div.left-area__header
+    .wrapper
+      .left-area
+        .left-area__header
           %h1 samplename
           %ul
             %li
@@ -20,18 +20,18 @@
             %li
               %a{ href: 'http://google.co.jp'}
                 %i.fa.fa-edit
-        %div.side_bar
+        .side_bar
           %a{ href: 'http://google.co.jp'}
-            %div.group
+            .group
               %p.group__group-name testgroup
               %p.group__group-message こんにちわ
-      %div.right_area
+      .right_area
 
         = yield
 
-        %div.form_area
+        .form_area
           %form.form
-            %div.type_message
+            .type_message
               %input{:placeholder => "type a message",:type => "text"}
               %label
                 %i.fa.fa-image

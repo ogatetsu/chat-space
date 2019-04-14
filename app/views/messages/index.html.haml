@@ -1,11 +1,10 @@
-%div.header_right
-  %div.header_name
+.header_right
+  .header_name
     %h2 ここはグループネーム
     %p member&nbsp;:&nbsp;
     %ul
       %li userA
       %li userB
-  %a{ href: 'http://google.co.jp'}
-    %div.edit Edit
-%div.message_area
+  =link_to 'Edit','http://google.co.jp', class: "edit"
+.message_area
   = render "message"
