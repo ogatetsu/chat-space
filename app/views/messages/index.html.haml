@@ -1,10 +1,31 @@
-.header_right
-  .header_name
-    %h2 ここはグループネーム
-    %p member&nbsp;:&nbsp;
+.left-area
+  .left-area__header
+    %h1 samplename
     %ul
-      %li userA
-      %li userB
-  =link_to 'Edit','http://google.co.jp', class: "edit"
-.message_area
-  = render "message"
+      %li
+        %a{ href: 'http://google.co.jp'}
+          %i.fa.fa-cog
+      %li
+        %a{ href: 'http://google.co.jp'}
+          %i.fa.fa-edit
+  .side_bar
+    = render "group"
+.right_area
+  .header_right
+    .header_name
+      %h2 ここはグループネーム
+      %p member&nbsp;:&nbsp;
+      %ul
+        %li userA
+        %li userB
+    =link_to 'Edit','http://google.co.jp', class: "edit"
+  .message_area
+    = render "message"
+  .form_area
+    %form.form
+      .type_message
+        %input{:placeholder => "type a message",:type => "text"}
+        %label
+          %i.fa.fa-image
+          %input{:type => "file", :value => "Send"}
+      %input{:type => "submit", :value => "Send"}

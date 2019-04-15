@@ -8,34 +8,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .create-box
-      %div.create-box__message グループ作成しました
+      .create-box__message グループ作成しました
     .wrapper
-      .left-area
-        .left-area__header
-          %h1 samplename
-          %ul
-            %li
-              %a{ href: 'http://google.co.jp'}
-                %i.fa.fa-cog
-            %li
-              %a{ href: 'http://google.co.jp'}
-                %i.fa.fa-edit
-        .side_bar
-          %a{ href: 'http://google.co.jp'}
-            .group
-              %p.group__group-name testgroup
-              %p.group__group-message こんにちわ
-      .right_area
+      = yield
 
-        = yield
-
-        .form_area
-          %form.form
-            .type_message
-              %input{:placeholder => "type a message",:type => "text"}
-              %label
-                %i.fa.fa-image
-                %input{:type => "file", :value => "Send"}
-            %input{:type => "submit", :value => "Send"}
 
 
