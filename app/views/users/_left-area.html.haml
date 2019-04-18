@@ -1,0 +1,13 @@
+.left-area
+  .left-area__header
+    %h1
+      = current_user.name
+    %ul
+      %li
+        %a{ href: 'http://google.co.jp'}
+          %i.fa.fa-cog
+      %li
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
+  .side_bar
+    = render "group"
