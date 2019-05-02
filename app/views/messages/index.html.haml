@@ -9,12 +9,14 @@
         %li userB
     =link_to 'Edit','http://google.co.jp', class: "edit"
   .message_area
-    = render "message"
-  .form_area
-    %form.form
-      .type_message
-        %input{:placeholder => "type a message",:type => "text"}
-        %label
-          %i.fa.fa-image
-          %input{:type => "file", :value => "Send"}
-      %input{:type => "submit", :value => "Send"}
+    = render @messages
+  .form
+    .form_area
+      .form_area__box
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form_area__message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'image_icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__submit'
