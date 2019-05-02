@@ -158,54 +158,80 @@ html,body{
   }
 }
 
-.form_area{
+
+.form{
   width:calc(100% - 300px);
   background-color: #ddd;
+  padding:20px 20px;
+  display: block;
   position: fixed;
   bottom: 0;
-  padding:20px 40px;
-  box-sizing: border-box;
-  .form{
-    display: flex;
-    input{
+  .form_area{
+    height:50px;
+    padding:0px 40px 0px 0px;
+    &__box{
+      height:50px;
+    }
+    &__message{
       color: #444;
       height:50px;
-      margin:0 auto;
       border: 0;
       font-size: 16px;
-    }
-    .type_message{
-      height:50px;
-      width: 100%;
-      padding:0 40px 0 10px;
-      margin:0 20px 0 0px;
+      background-color: $white-color;
+      padding:0 20px ;
+      width:calc(100% - 150px);
+      float:left;
       position: relative;
-      input[type="text"]{
-        background-color: $white-color;
-        color: #434a54;
-        border: 0;
-        font-size: 16px;
-        padding:0 40px 0 10px;
-        margin:0 10px 0 0px;
-        width: 100%;
-      }
-      input[type="file"]{
-        display:none;
-      }
-      label{
-        position: absolute;
-        top: 15px;
-        right: 10px;
-        i.fa.fa-image{
-          cursor: pointer;
-          display: inline-block;
-          font-size: 1.3rem;
-        }
-      }
-    }
-    input[type="submit"]{
-      @include btn-style();
     }
   }
 }
+
+.form__mask{
+  position: absolute;
+  top: 35px;
+  right: 200px;
+  height:50px;
+  float:left;
+  .image_icon{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+  .hidden{
+    display:none;
+  }
+}
+
+.form__submit{
+  @include btn-style();
+  float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
